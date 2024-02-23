@@ -1,0 +1,249 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utility.Log</name>
+    </assembly>
+    <members>
+        <member name="T:Utility.Log.ILog">
+            <summary>
+            日记接口
+            </summary>
+        </member>
+        <member name="P:Utility.Log.ILog.SkipFrames">
+            <summary> 堆栈中要跳过的帧数 </summary>
+        </member>
+        <member name="P:Utility.Log.ILog.BaseFileName">
+            <summary> 基础文件名 </summary>
+        </member>
+        <member name="P:Utility.Log.ILog.BaseFileIndex">
+            <summary> 基础文件脚标索引 </summary>
+        </member>
+        <member name="P:Utility.Log.ILog.BaseFileFullPath">
+            <summary> 基础文件路径 </summary>
+        </member>
+        <member name="M:Utility.Log.ILog.Override(System.String)">
+            <summary>
+            接口重构体
+            </summary>
+            <param name="baseFileName">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="T:Utility.Log.LogEntry">
+            <summary>
+            日记实体
+            </summary>
+        </member>
+        <member name="F:Utility.Log.LogEntry._dateTime">
+            <summary>
+            日记时间
+            </summary>
+        </member>
+        <member name="F:Utility.Log.LogEntry._errorCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="F:Utility.Log.LogEntry._message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="F:Utility.Log.LogEntry._file">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="F:Utility.Log.LogEntry._level">
+            <summary>
+            日记等级
+            </summary>
+        </member>
+        <member name="F:Utility.Log.LogEntry._formatDateTime">
+            <summary>
+            格式化时间
+            </summary>
+        </member>
+        <member name="F:Utility.Log.LogEntry._line">
+            <summary>
+            行
+            </summary>
+        </member>
+        <member name="P:Utility.Log.LogEntry.DateTime">
+            <summary>
+            日记时间
+            </summary>
+        </member>
+        <member name="P:Utility.Log.LogEntry.FormatDateTime">
+            <summary>
+            格式化时间
+            </summary>
+        </member>
+        <member name="P:Utility.Log.LogEntry.Level">
+            <summary>
+            日记等级
+            </summary>
+        </member>
+        <member name="P:Utility.Log.LogEntry.File">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:Utility.Log.LogEntry.Message">
+            <summary>
+            消息
+            </summary>
+        </member>
+        <member name="P:Utility.Log.LogEntry.Line">
+            <summary>
+            行
+            </summary>
+        </member>
+        <member name="P:Utility.Log.LogEntry.ErrorCode">
+            <summary>
+            错误码
+            </summary>
+        </member>
+        <member name="T:Utility.Log.Logger">
+            <summary>
+            日记记录器
+            </summary>
+        </member>
+        <member name="M:Utility.Log.Logger.Instance(System.String)">
+            <summary>
+            日记单例
+            </summary>
+            <param name="baseFileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.Log.Logger.Instance(System.String,System.String)">
+            <summary>
+            日记单例
+            </summary>
+            <param name="basePath">相对路径</param>
+            <param name="baseFileName">日记文件夹</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.Log.Logger.Override(System.String)">
+            <summary>
+            接口重构体
+            </summary>
+            <param name="baseFileName">文件名</param>
+            <returns></returns>
+        </member>
+        <member name="F:Utility.Log.Logger._instances">
+            <summary>
+            实例列表
+            </summary>
+        </member>
+        <member name="F:Utility.Log.Logger._currentLogLevel">
+            <summary>
+            当前日记等级
+            </summary>
+        </member>
+        <member name="F:Utility.Log.Logger._stringBuilder">
+            <summary>
+            可变字符串
+            </summary>
+        </member>
+        <member name="F:Utility.Log.Logger._logWriter">
+            <summary>
+            流文件写入者
+            </summary>
+        </member>
+        <member name="F:Utility.Log.Logger._logFileWriter">
+            <summary>
+            要写入的流文件
+            </summary>
+        </member>
+        <member name="F:Utility.Log.Logger._myLock">
+            <summary>
+            锁
+            </summary>
+        </member>
+        <member name="F:Utility.Log.Logger._baseFileDate">
+            <summary> 基础文件日期 </summary>
+        </member>
+        <member name="F:Utility.Log.Logger.SINGLEFILE_MAX_SIZE">
+            <summary>
+            单个文件最大尺寸
+            </summary>
+        </member>
+        <member name="F:Utility.Log.Logger.BASE_FILETYPE">
+            <summary>
+            基础文件类型
+            </summary>
+        </member>
+        <member name="F:Utility.Log.Logger.BASE_FILEPATH">
+            <summary>
+            基础文件子文件夹
+            </summary>
+        </member>
+        <member name="P:Utility.Log.Logger.BaseFileDate">
+            <summary> 基础文件日期 </summary>
+        </member>
+        <member name="F:Utility.Log.Logger._skipFrames">
+            <summary> 堆栈中要跳过的帧数 </summary>
+        </member>
+        <member name="F:Utility.Log.Logger._baseFileName">
+            <summary> 基础文件名 </summary>
+        </member>
+        <member name="F:Utility.Log.Logger._baseFileIndex">
+            <summary> 基础文件脚标索引 </summary>
+        </member>
+        <member name="F:Utility.Log.Logger._baseFileFullPath">
+            <summary> 基础文件路径 </summary>
+        </member>
+        <member name="P:Utility.Log.Logger.SkipFrames">
+            <summary> 堆栈中要跳过的帧数 </summary>
+        </member>
+        <member name="P:Utility.Log.Logger.BaseFileName">
+            <summary> 基础文件名 </summary>
+        </member>
+        <member name="P:Utility.Log.Logger.BaseFileIndex">
+            <summary> 基础文件脚标索引 </summary>
+        </member>
+        <member name="P:Utility.Log.Logger.BaseFileFullPath">
+            <summary> 基础文件路径 </summary>
+        </member>
+        <member name="M:Utility.Log.Logger.Initialize">
+            <summary>
+            初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.Log.Logger.Initialize(System.String)">
+            <summary>
+            初始化
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.Log.Logger.UnInitialize">
+            <summary>
+            反初始化
+            </summary>
+        </member>
+        <member name="T:Utility.Log.LogLevel">
+            <summary>
+            日记级别
+            </summary>
+        </member>
+        <member name="F:Utility.Log.LogLevel.Debug">
+            <summary> 调试 </summary>
+        </member>
+        <member name="F:Utility.Log.LogLevel.Info">
+            <summary> 提示 </summary>
+        </member>
+        <member name="F:Utility.Log.LogLevel.Warn">
+            <summary> 警告 </summary>
+        </member>
+        <member name="F:Utility.Log.LogLevel.Error">
+            <summary> 错误 </summary>
+        </member>
+        <member name="F:Utility.Log.LogLevel.Fatal">
+            <summary> 致命 </summary>
+        </member>
+        <member name="F:Utility.Log.LogLevel.Trace">
+            <summary> 跟踪 </summary>
+        </member>
+    </members>
+</doc>

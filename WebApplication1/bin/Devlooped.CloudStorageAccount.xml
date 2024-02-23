@@ -1,0 +1,1139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Devlooped.CloudStorageAccount</name>
+    </assembly>
+    <members>
+        <member name="T:Devlooped.BlobAccountExtensions">
+            <summary>
+            Provides the <see cref="M:Devlooped.BlobAccountExtensions.CreateCloudBlobClient(Devlooped.CloudStorageAccount)"/> extension method.
+            </summary>
+        </member>
+        <member name="M:Devlooped.BlobAccountExtensions.CreateCloudBlobClient(Devlooped.CloudStorageAccount)">
+            <summary>
+            Creates a Blob service client from the given account.
+            </summary>
+        </member>
+        <member name="M:Devlooped.BlobAccountExtensions.CreateBlobServiceClient(Devlooped.CloudStorageAccount)">
+            <summary>
+            Creates a Blob service client from the given account.
+            </summary>
+        </member>
+        <member name="T:Devlooped.CloudStorageAccount">
+            <summary>
+            Represents a Microsoft Azure Storage account.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.UseDevelopmentStorageSettingString">
+            <summary>
+            The setting name for using the development storage.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DevelopmentStorageProxyUriSettingString">
+            <summary>
+            The setting name for specifying a development storage proxy Uri.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DefaultEndpointsProtocolSettingString">
+            <summary>
+            The setting name for using the default storage endpoints with the specified protocol.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.AccountNameSettingString">
+            <summary>
+            The setting name for the account name.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.AccountKeyNameSettingString">
+            <summary>
+            The setting name for the account key name.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.AccountKeySettingString">
+            <summary>
+            The setting name for the account key.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.BlobEndpointSettingString">
+            <summary>
+            The setting name for a custom blob storage endpoint.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.QueueEndpointSettingString">
+            <summary>
+            The setting name for a custom queue endpoint.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.TableEndpointSettingString">
+            <summary>
+            The setting name for a custom table storage endpoint.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.FileEndpointSettingString">
+            <summary>
+            The setting name for a custom file storage endpoint.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.EndpointSuffixSettingString">
+            <summary>
+            The setting name for a custom storage endpoint suffix.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.SharedAccessSignatureSettingString">
+            <summary>
+            The setting name for a shared access key.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DevstoreAccountName">
+            <summary>
+            The default account name for the development storage.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DevstoreAccountKey">
+            <summary>
+            The default account key for the development storage.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.SecondaryLocationAccountSuffix">
+            <summary>
+            The suffix appended to account in order to access secondary location for read only access.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DefaultEndpointSuffix">
+            <summary>
+            The default storage service hostname suffix.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DefaultBlobHostnamePrefix">
+            <summary>
+            The default blob storage DNS hostname prefix.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DefaultQueueHostnamePrefix">
+            <summary>
+            The root queue DNS name prefix.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DefaultTableHostnamePrefix">
+            <summary>
+            The root table storage DNS name prefix.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DefaultFileHostnamePrefix">
+            <summary>
+            The default file storage DNS hostname prefix.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.UseDevelopmentStorageSetting">
+            <summary>
+            Validator for the UseDevelopmentStorage setting. Must be "true".
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DevelopmentStorageProxyUriSetting">
+            <summary>
+            Validator for the DevelopmentStorageProxyUri setting. Must be a valid Uri.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.DefaultEndpointsProtocolSetting">
+            <summary>
+            Validator for the DefaultEndpointsProtocol setting. Must be either "http" or "https".
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.AccountNameSetting">
+            <summary>
+            Validator for the AccountName setting. No restrictions.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.AccountKeyNameSetting">
+            <summary>
+            Validator for the AccountKey setting. No restrictions.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.AccountKeySetting">
+            <summary>
+            Validator for the AccountKey setting. Must be a valid base64 string.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.BlobEndpointSetting">
+            <summary>
+            Validator for the BlobEndpoint setting. Must be a valid Uri.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.QueueEndpointSetting">
+            <summary>
+            Validator for the QueueEndpoint setting. Must be a valid Uri.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.TableEndpointSetting">
+            <summary>
+            Validator for the TableEndpoint setting. Must be a valid Uri.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.FileEndpointSetting">
+            <summary>
+            Validator for the FileEndpoint setting. Must be a valid Uri.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.EndpointSuffixSetting">
+            <summary>
+            Validator for the EndpointSuffix setting. Must be a valid Uri.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.SharedAccessSignatureSetting">
+            <summary>
+            Validator for the SharedAccessSignature setting. No restrictions.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.devStoreAccount">
+            <summary>
+            Singleton instance for the development storage account.
+            </summary>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.accountName">
+            <summary>
+            Private record of the account name for use in ToString(bool).
+            </summary>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.#ctor(Devlooped.StorageCredentials,System.Uri,System.Uri,System.Uri,System.Uri)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devlooped.CloudStorageAccount"/> class using the specified
+            credentials and service endpoints.
+            </summary>
+            <param name="storageCredentials">A <see cref="T:Devlooped.StorageCredentials"/> object.</param>
+            <param name="blobEndpoint">A <see cref="T:System.Uri"/> specifying the primary Blob service endpoint.</param>
+            <param name="queueEndpoint">A <see cref="T:System.Uri"/> specifying the primary Queue service endpoint.</param>
+            <param name="tableEndpoint">A <see cref="T:System.Uri"/> specifying the primary Table service endpoint.</param>
+            <param name="fileEndpoint">A <see cref="T:System.Uri"/> specifying the primary File service endpoint.</param>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.#ctor(Devlooped.StorageCredentials,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devlooped.CloudStorageAccount"/> class using the specified
+            credentials, and specifies whether to use HTTP or HTTPS to connect to the storage services. 
+            </summary>
+            <param name="storageCredentials">A <see cref="T:Devlooped.StorageCredentials"/> object.</param>
+            <param name="useHttps"><c>true</c> to use HTTPS to connect to storage service endpoints; otherwise, <c>false</c>.</param>
+            <remarks>Using HTTPS to connect to the storage services is recommended.</remarks>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.#ctor(Devlooped.StorageCredentials,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devlooped.CloudStorageAccount"/> class using the specified
+            credentials and endpoint suffix, and specifies whether to use HTTP or HTTPS to connect to the storage services.
+            </summary>
+            <param name="storageCredentials">A <see cref="T:Devlooped.StorageCredentials"/> object.</param>
+            <param name="endpointSuffix">The DNS endpoint suffix for all storage services, e.g. "core.windows.net".</param>
+            <param name="useHttps"><c>true</c> to use HTTPS to connect to storage service endpoints; otherwise, <c>false</c>.</param>
+            <remarks>Using HTTPS to connect to the storage services is recommended.</remarks>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.#ctor(Devlooped.StorageCredentials,System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devlooped.CloudStorageAccount"/> class using the specified
+            credentials and endpoint suffix, and specifies whether to use HTTP or HTTPS to connect to the storage services.
+            </summary>
+            <param name="storageCredentials">A <see cref="T:Devlooped.StorageCredentials"/> object.</param>
+            <param name="accountName">The name of the account.</param>
+            <param name="endpointSuffix">The DNS endpoint suffix for all storage services, e.g. "core.windows.net".</param>
+            <param name="useHttps"><c>true</c> to use HTTPS to connect to storage service endpoints; otherwise, <c>false</c>.</param>
+            <remarks>Using HTTPS to connect to the storage services is recommended.</remarks>
+        </member>
+        <member name="P:Devlooped.CloudStorageAccount.DevelopmentStorageAccount">
+            <summary>
+            Gets a <see cref="T:Devlooped.CloudStorageAccount"/> object that references the well-known development storage account.
+            </summary>
+            <value>A <see cref="T:Devlooped.CloudStorageAccount"/> object representing the development storage account.</value>
+        </member>
+        <member name="P:Devlooped.CloudStorageAccount.IsDevStoreAccount">
+            <summary>
+            Indicates whether this account is a development storage account.
+            </summary>
+        </member>
+        <member name="P:Devlooped.CloudStorageAccount.EndpointSuffix">
+            <summary>
+            The storage service hostname suffix set by the user, if any.
+            </summary>
+        </member>
+        <member name="P:Devlooped.CloudStorageAccount.Settings">
+            <summary>
+            The connection string parsed into settings.
+            </summary>
+        </member>
+        <member name="P:Devlooped.CloudStorageAccount.DefaultEndpoints">
+            <summary>
+            True if the user used a constructor that auto-generates endpoints.
+            </summary>
+        </member>
+        <member name="P:Devlooped.CloudStorageAccount.BlobEndpoint">
+            <summary>
+            Gets the primary endpoint for the Blob service, as configured for the storage account.
+            </summary>
+            <value>A <see cref="T:System.Uri"/> containing the primary Blob service endpoint.</value>
+        </member>
+        <member name="P:Devlooped.CloudStorageAccount.QueueEndpoint">
+            <summary>
+            Gets the primary endpoint for the Queue service, as configured for the storage account.
+            </summary>
+            <value>A <see cref="T:System.Uri"/> containing the primary Queue service endpoint.</value>
+        </member>
+        <member name="P:Devlooped.CloudStorageAccount.TableEndpoint">
+            <summary>
+            Gets the primary endpoint for the Table service, as configured for the storage account.
+            </summary>
+            <value>A <see cref="T:System.Uri"/> containing the primary Table service endpoint.</value>
+        </member>
+        <member name="P:Devlooped.CloudStorageAccount.FileEndpoint">
+            <summary>
+            Gets the primary endpoint for the File service, as configured for the storage account.
+            </summary>
+            <value>A <see cref="T:System.Uri"/> containing the primary File service endpoint.</value>
+        </member>
+        <member name="P:Devlooped.CloudStorageAccount.Credentials">
+            <summary>
+            Gets the credentials used to create this <see cref="T:Devlooped.CloudStorageAccount"/> object.
+            </summary>
+            <value>A <see cref="T:Devlooped.StorageCredentials"/> object.</value>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.Parse(System.String)">
+            <summary>
+            Parses a connection string and returns a <see cref="T:Devlooped.CloudStorageAccount"/> created
+            from the connection string.
+            </summary>
+            <param name="connectionString">A valid connection string.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if <paramref name="connectionString"/> is null or empty.</exception>
+            <exception cref="T:System.FormatException">Thrown if <paramref name="connectionString"/> is not a valid connection string.</exception>
+            <exception cref="T:System.ArgumentException">Thrown if <paramref name="connectionString"/> cannot be parsed.</exception>
+            <returns>A <see cref="T:Devlooped.CloudStorageAccount"/> object constructed from the values provided in the connection string.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.TryParse(System.String,Devlooped.CloudStorageAccount@)">
+            <summary>
+            Indicates whether a connection string can be parsed to return a <see cref="T:Devlooped.CloudStorageAccount"/> object.
+            </summary>
+            <param name="connectionString">The connection string to parse.</param>
+            <param name="account">A <see cref="T:Devlooped.CloudStorageAccount"/> object to hold the instance returned if
+            the connection string can be parsed.</param>
+            <returns><b>true</b> if the connection string was successfully parsed; otherwise, <b>false</b>.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ToString">
+            <summary>
+            Returns a connection string for this storage account, without sensitive data.
+            </summary>
+            <returns>A connection string.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ToString(System.Boolean)">
+            <summary>
+            Returns a connection string for this storage account, optionally with sensitive data.
+            </summary>
+            <returns>A connection string.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.GetDevelopmentStorageAccount(System.Uri)">
+            <summary>
+            Returns a <see cref="T:Devlooped.CloudStorageAccount"/> with development storage credentials using the specified proxy Uri.
+            </summary>
+            <param name="proxyUri">The proxy endpoint to use.</param>
+            <returns>The new <see cref="T:Devlooped.CloudStorageAccount"/>.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ParseImpl(System.String,Devlooped.CloudStorageAccount@,System.Action{System.String})">
+            <summary>
+            Internal implementation of Parse/TryParse.
+            </summary>
+            <param name="connectionString">The string to parse.</param>
+            <param name="accountInformation">The <see cref="T:Devlooped.CloudStorageAccount"/> to return.</param>
+            <param name="error">A callback for reporting errors.</param>
+            <returns>If true, the parse was successful. Otherwise, false.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ParseStringIntoSettings(System.String,System.Action{System.String})">
+            <summary>
+            Tokenizes input and stores name value pairs.
+            </summary>
+            <param name="connectionString">The string to parse.</param>
+            <param name="error">Error reporting delegate.</param>
+            <returns>Tokenized collection.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.Setting(System.String,System.String[])">
+            <summary>
+            Encapsulates a validation rule for an enumeration based account setting.
+            </summary>
+            <param name="name">The name of the setting.</param>
+            <param name="validValues">A list of valid values for the setting.</param>
+            <returns>An <see cref="T:System.Collections.Generic.KeyValuePair`2"/> representing the enumeration constraint.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.Setting(System.String,System.Func{System.String,System.Boolean})">
+            <summary>
+            Encapsulates a validation rule using a func.
+            </summary>
+            <param name="name">The name of the setting.</param>
+            <param name="isValid">A func that determines if the value is valid.</param>
+            <returns>An <see cref="T:System.Collections.Generic.KeyValuePair`2"/> representing the constraint.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.IsValidBase64String(System.String)">
+            <summary>
+            Determines whether the specified setting value is a valid base64 string.
+            </summary>
+            <param name="settingValue">The setting value.</param>
+            <returns><c>true</c> if the specified setting value is a valid base64 string; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.IsValidUri(System.String)">
+            <summary>
+            Validation function that validates Uris.
+            </summary>
+            <param name="settingValue">Value to validate.</param>
+            <returns><c>true</c> if the specified setting value is a valid Uri; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.IsValidDomain(System.String)">
+            <summary>
+            Validation function that validates a domain name.
+            </summary>
+            <param name="settingValue">Value to validate.</param>
+            <returns><c>true</c> if the specified setting value is a valid domain; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.AllRequired(System.Collections.Generic.KeyValuePair{System.String,System.Func{System.String,System.Boolean}}[])">
+            <summary>
+            Settings filter that requires all specified settings be present and valid.
+            </summary>
+            <param name="requiredSettings">A list of settings that must be present.</param>
+            <returns>The remaining settings or <c>null</c> if the filter's requirement is not satisfied.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.Optional(System.Collections.Generic.KeyValuePair{System.String,System.Func{System.String,System.Boolean}}[])">
+            <summary>
+            Settings filter that removes optional values.
+            </summary>
+            <param name="optionalSettings">A list of settings that are optional.</param>
+            <returns>The remaining settings or <c>null</c> if the filter's requirement is not satisfied.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.AtLeastOne(System.Collections.Generic.KeyValuePair{System.String,System.Func{System.String,System.Boolean}}[])">
+            <summary>
+            Settings filter that ensures that at least one setting is present.
+            </summary>
+            <param name="atLeastOneSettings">A list of settings of which one must be present.</param>
+            <returns>The remaining settings or <c>null</c> if the filter's requirement is not satisfied.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.None(System.Collections.Generic.KeyValuePair{System.String,System.Func{System.String,System.Boolean}}[])">
+            <summary>
+            Settings filter that ensures that none of the specified settings are present.
+            </summary>
+            <param name="atLeastOneSettings">A list of settings of which one must not be present.</param>
+            <returns>The remaining settings or <c>null</c> if the filter's requirement is not satisfied.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.MatchesAll(System.Func{System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String}}[])">
+            <summary>
+            Settings filter that ensures that all of the specified filters match.
+            </summary>
+            <param name="filters">A list of filters of which all must match.</param>
+            <returns>The remaining settings or <c>null</c> if the filter's requirement is not satisfied.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.MatchesOne(System.Func{System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String}}[])">
+            <summary>
+            Settings filter that ensures that exactly one filter matches.
+            </summary>
+            <param name="filters">A list of filters of which exactly one must match.</param>
+            <returns>The remaining settings or <c>null</c> if the filter's requirement is not satisfied.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.MatchesExactly(System.Func{System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String}})">
+            <summary>
+            Settings filter that ensures that the specified filter is an exact match.
+            </summary>
+            <param name="filter">A list of filters of which ensures that the specified filter is an exact match.</param>
+            <returns>The remaining settings or <c>null</c> if the filter's requirement is not satisfied.</returns>
+        </member>
+        <member name="F:Devlooped.CloudStorageAccount.ValidCredentials">
+            <summary>
+            Settings filter that ensures that a valid combination of credentials is present.
+            </summary>
+            <returns>The remaining settings or <c>null</c> if the filter's requirement is not satisfied.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.MatchesSpecification(System.Collections.Generic.IDictionary{System.String,System.String},System.Func{System.Collections.Generic.IDictionary{System.String,System.String},System.Collections.Generic.IDictionary{System.String,System.String}}[])">
+            <summary>
+            Tests to see if a given list of settings matches a set of filters exactly.
+            </summary>
+            <param name="settings">The settings to check.</param>
+            <param name="constraints">A list of filters to check.</param>
+            <returns>
+            If any filter returns null, false.
+            If there are any settings left over after all filters are processed, false.
+            Otherwise true.
+            </returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.GetCredentials(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets a StorageCredentials object corresponding to whatever credentials are supplied in the given settings.
+            </summary>
+            <param name="settings">The settings to check.</param>
+            <returns>The StorageCredentials object specified in the settings.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ConstructBlobEndpoint(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the default blob endpoint using specified settings.
+            </summary>
+            <param name="settings">The settings to use.</param>
+            <returns>The default blob endpoint.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ConstructBlobEndpoint(System.String,System.String,System.String)">
+            <summary>
+            Gets the default blob endpoint using the specified protocol and account name.
+            </summary>
+            <param name="scheme">The protocol to use.</param>
+            <param name="accountName">The name of the storage account.</param>
+            <param name="endpointSuffix">The Endpoint DNS suffix; use <c>null</c> for default.</param>
+            <returns>The default blob endpoint.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ConstructFileEndpoint(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the default file endpoint using specified settings.
+            </summary>
+            <param name="settings">The settings to use.</param>
+            <returns>The default file endpoint.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ConstructFileEndpoint(System.String,System.String,System.String)">
+            <summary>
+            Gets the default file endpoint using the specified protocol and account name.
+            </summary>
+            <param name="scheme">The protocol to use.</param>
+            <param name="accountName">The name of the storage account.</param>
+            <param name="endpointSuffix">The Endpoint DNS suffix; use <c>null</c> for default.</param>
+            <returns>The default file endpoint.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ConstructQueueEndpoint(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the default queue endpoint using the specified settings.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns>The default queue endpoint.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ConstructQueueEndpoint(System.String,System.String,System.String)">
+            <summary>
+            Gets the default queue endpoint using the specified protocol and account name.
+            </summary>
+            <param name="scheme">The protocol to use.</param>
+            <param name="accountName">The name of the storage account.</param>
+            <param name="endpointSuffix">The Endpoint DNS suffix; use <c>null</c> for default.</param>
+            <returns>The default queue endpoint.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ConstructTableEndpoint(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Gets the default table endpoint using the specified settings.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns>The default table endpoint.</returns>
+        </member>
+        <member name="M:Devlooped.CloudStorageAccount.ConstructTableEndpoint(System.String,System.String,System.String)">
+            <summary>
+            Gets the default table endpoint using the specified protocol and account name.
+            </summary>
+            <param name="scheme">The protocol to use.</param>
+            <param name="accountName">The name of the storage account.</param>
+            <param name="endpointSuffix">The Endpoint DNS suffix; use <c>null</c> for default.</param>
+            <returns>The default table endpoint.</returns>
+        </member>
+        <member name="T:Devlooped.QueueAccountExtensions">
+            <summary>
+            Provides the <see cref="M:Devlooped.QueueAccountExtensions.CreateCloudQueueClient(Devlooped.CloudStorageAccount)"/> extension method.
+            </summary>
+        </member>
+        <member name="M:Devlooped.QueueAccountExtensions.CreateCloudQueueClient(Devlooped.CloudStorageAccount)">
+            <summary>
+            Creates a Queue service client from the given account.
+            </summary>
+        </member>
+        <member name="M:Devlooped.QueueAccountExtensions.CreateQueueServiceClient(Devlooped.CloudStorageAccount)">
+            <summary>
+            Creates a Queue service client from the given account.
+            </summary>
+        </member>
+        <member name="T:Devlooped.StorageCredentials">
+            <summary>
+            Represents a set of credentials used to authenticate access 
+            to a Microsoft Azure storage account.
+            </summary>
+        </member>
+        <member name="M:Devlooped.StorageCredentials.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devlooped.StorageCredentials"/> with 
+            no credentials information (i.e. for anonymous access).
+            </summary>
+        </member>
+        <member name="M:Devlooped.StorageCredentials.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devlooped.StorageCredentials"/> class with the 
+            specified account name and key value.
+            </summary>
+            <param name="accountName">The name of the Storage Account.</param>
+            <param name="accountKey">A Storage Account access key.</param>
+        </member>
+        <member name="M:Devlooped.StorageCredentials.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devlooped.StorageCredentials"/> class with the
+            specified shared access signature token.
+            </summary>
+            <param name="signature">A string representing the shared access signature token.</param>
+        </member>
+        <member name="M:Devlooped.StorageCredentials.#ctor(Azure.Core.TokenCredential)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Devlooped.StorageCredentials"/> class with the
+            specified token credentials. Will typically be an instance of <c>DefaultAzureCredentials</c>.
+            </summary>
+        </member>
+        <member name="P:Devlooped.StorageCredentials.IsAnonymous">
+            <summary>
+            Gets a value indicating whether the credentials are for anonymous access.
+            </summary>
+        </member>
+        <member name="P:Devlooped.StorageCredentials.IsSAS">
+            <summary>
+            Gets a value indicating whether the credentials are a shared access signature token.
+            </summary>
+        </member>
+        <member name="P:Devlooped.StorageCredentials.IsSharedKey">
+            <summary>
+            Gets a value indicating whether the credentials are a shared key.
+            </summary>
+        </member>
+        <member name="P:Devlooped.StorageCredentials.AccountName">
+            <summary>
+            Gets the associated account name for the credentials if <see cref="P:Devlooped.StorageCredentials.IsSharedKey"/> 
+            is <see langword="true"/>.
+            </summary>
+        </member>
+        <member name="P:Devlooped.StorageCredentials.Key">
+            <summary>
+            Gets the associated key for the credentials if <see cref="P:Devlooped.StorageCredentials.IsSharedKey"/>
+            is <see langword="true"/>.
+            </summary>
+        </member>
+        <member name="M:Devlooped.StorageCredentials.SetAccountKey(System.String)">
+            <summary>
+            Update the Storage Account's access key when using a shared access key. 
+            This intended to be used when you've regenerated your Storage Account's 
+            access keys and want to update long lived clients.
+            </summary>
+            <param name="accountKey">A Storage Account access key.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown if the credentials were not created as shared access key credentials initially.</exception>
+        </member>
+        <member name="M:Devlooped.StorageCredentials.Update(System.String)">
+            <summary>
+            Updates the shared access signature. This is intended to be used when you've
+            regenerated your shared access signature and want to update long lived clients.
+            </summary>
+            <param name="signature">Shared access signature to authenticate the service against.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when the signature is null.</exception>
+            <exception cref="T:System.ArgumentException">Thrown when the signature is empty.</exception>
+            <exception cref="T:System.InvalidOperationException">Throws when the credentials are not </exception>
+            <exception cref="T:System.InvalidOperationException">Thrown if the credentials were not created as shared access signature credentials initially.</exception>
+        </member>
+        <member name="M:Devlooped.StorageCredentials.UpdateSASToken(System.String)">
+            <summary>
+            Updates the shared access signature (SAS) token value for storage credentials created with a shared access signature.
+            </summary>
+            <param name="sasToken">A string that specifies the SAS token value to update.</param>
+        </member>
+        <member name="M:Devlooped.StorageCredentials.UpdateKey(System.String)">
+            <summary>
+            Update the Storage Account's access key. This intended to be used when you've
+            regenerated your Storage Account's access keys and want to update long lived
+            clients.
+            </summary>
+            <param name="accountKey">A Storage Account access key.</param>
+            <exception cref="T:System.InvalidOperationException">Thrown if the credentials were not created as shared access key credentials initially.</exception>
+        </member>
+        <member name="T:Devlooped.TableAccountExtensions">
+            <summary>
+            Provides the <see cref="M:Devlooped.TableAccountExtensions.CreateCloudTableClient(Devlooped.CloudStorageAccount)"/> extension method.
+            </summary>
+        </member>
+        <member name="M:Devlooped.TableAccountExtensions.CreateCloudTableClient(Devlooped.CloudStorageAccount)">
+            <summary>
+            Creates a Table service client from the given account.
+            </summary>
+        </member>
+        <member name="M:Devlooped.TableAccountExtensions.CreateTableServiceClient(Devlooped.CloudStorageAccount)">
+            <summary>
+            Creates a Table service client from the given account.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.AllowNullAttribute">
+            <summary>
+            Specifies that null is allowed as an input even if the corresponding type disallows it.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DisallowNullAttribute">
+            <summary>
+            Specifies that null is disallowed as an input even if the corresponding type allows it.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute">
+            <summary>
+            Applied to a method that will never return under any circumstance.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute">
+            <summary>
+            Specifies that the method will not return if the associated Boolean parameter is passed the specified value.
+            </summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.#ctor(System.Boolean)">
+            <summary>
+            Initializes the attribute with the specified parameter value.
+            </summary>
+            <param name="parameterValue">
+            The condition parameter value. Code after the method will be considered unreachable
+            by diagnostics if the argument to the associated parameter matches this value.
+            </param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.DoesNotReturnIfAttribute.ParameterValue">
+            <summary>
+            Gets the condition parameter value.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullAttribute">
+            <summary>
+            Specifies that an output may be null even if the corresponding type disallows it.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute">
+            <summary>
+            Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue"/>, the parameter may be null even if the corresponding type disallows it.
+            </summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>
+            Initializes the attribute with the specified return value condition.
+            </summary>
+            <param name="returnValue">The return value condition. If the method returns this value, the associated parameter may be null.</param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MaybeNullWhenAttribute.ReturnValue">
+            <summary>
+            Gets the return value condition.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute">
+            <summary>
+            Specifies that the method or property will ensure that the listed field and property members have not-null values.
+            </summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String)">
+            <summary>
+            Initializes the attribute with a field or property member.
+            </summary>
+            <param name="member">The field or property member that is promised to be not-null.</param>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.#ctor(System.String[])">
+            <summary>
+            Initializes the attribute with the list of field and property members.
+            </summary>
+            <param name="members">The list of field and property members that are promised to be not-null.</param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullAttribute.Members">
+            <summary>
+            Gets field or property member names.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute">
+            <summary>
+            Specifies that the method or property will ensure that the listed field and property
+            members have not-null values when returning with the specified return value condition.
+            </summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String)">
+            <summary>
+            Initializes the attribute with the specified return value condition and a field or property member.
+            </summary>
+            <param name="returnValue">The return value condition. If the method returns this value, the associated parameter will not be null.</param>
+            <param name="member">The field or property member that is promised to be not-null.</param>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.#ctor(System.Boolean,System.String[])">
+            <summary>
+            Initializes the attribute with the specified return value condition and list of field and property members.
+            </summary>
+            <param name="returnValue">The return value condition. If the method returns this value, the associated parameter will not be null.</param>
+            <param name="members">The list of field and property members that are promised to be not-null.</param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.ReturnValue">
+            <summary>
+            Gets the return value condition.
+            </summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.MemberNotNullWhenAttribute.Members">
+            <summary>
+            Gets field or property member names.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullAttribute">
+            <summary>
+            Specifies that an output will not be null even if the corresponding type allows it.
+            Specifies that an input argument was not null when the call returns.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute">
+            <summary>
+            Specifies that the output will be non-null if the named parameter is non-null.
+            </summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.#ctor(System.String)">
+            <summary>
+            Initializes the attribute with the associated parameter name.
+            </summary>
+            <param name="parameterName">The associated parameter name. The output will be non-null if the argument to the parameter specified is non-null.</param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullIfNotNullAttribute.ParameterName">
+            <summary>
+            Gets the associated parameter name.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute">
+            <summary>
+            Specifies that when a method returns <see cref="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue"/>, the parameter will not be null even if the corresponding type allows it.
+            </summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.#ctor(System.Boolean)">
+            <summary>
+            Initializes the attribute with the specified return value condition.
+            </summary>
+            <param name="returnValue">The return value condition. If the method returns this value, the associated parameter will not be null.</param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.NotNullWhenAttribute.ReturnValue">
+            <summary>Gets the return value condition.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.SetsRequiredMembersAttribute">
+            <summary>
+            Specifies that this constructor sets all required members for the current type,
+            and callers do not need to set any required members themselves.
+            </summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute">
+            <summary>
+            Specifies the syntax used in a string.
+            </summary>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.#ctor(System.String)">
+            <summary>
+            Initializes the <see cref="T:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute"/> with the identifier of the syntax used.
+            </summary>
+            <param name="syntax">The syntax identifier.</param>
+        </member>
+        <member name="M:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.#ctor(System.String,System.Object[])">
+            <summary>Initializes the <see cref="T:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute"/> with the identifier of the syntax used.</summary>
+            <param name="syntax">The syntax identifier.</param>
+            <param name="arguments">Optional arguments associated with the specific syntax employed.</param>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.Syntax">
+            <summary>Gets the identifier of the syntax used.</summary>
+        </member>
+        <member name="P:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.Arguments">
+            <summary>Optional arguments associated with the specific syntax employed.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.CompositeFormat">
+            <summary>The syntax identifier for strings containing composite formats for string formatting.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.DateOnlyFormat">
+            <summary>The syntax identifier for strings containing date format specifiers.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.DateTimeFormat">
+            <summary>The syntax identifier for strings containing date and time format specifiers.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.EnumFormat">
+            <summary>The syntax identifier for strings containing <see cref="T:System.Enum"/> format specifiers.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.GuidFormat">
+            <summary>The syntax identifier for strings containing <see cref="T:System.Guid"/> format specifiers.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.Json">
+            <summary>The syntax identifier for strings containing JavaScript Object Notation (JSON).</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.NumericFormat">
+            <summary>The syntax identifier for strings containing numeric format specifiers.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.Regex">
+            <summary>The syntax identifier for strings containing regular expressions.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.TimeOnlyFormat">
+            <summary>The syntax identifier for strings containing time format specifiers.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.TimeSpanFormat">
+            <summary>The syntax identifier for strings containing <see cref="T:System.TimeSpan"/> format specifiers.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.Uri">
+            <summary>The syntax identifier for strings containing URIs.</summary>
+        </member>
+        <member name="F:System.Diagnostics.CodeAnalysis.StringSyntaxAttribute.Xml">
+            <summary>The syntax identifier for strings containing XML.</summary>
+        </member>
+        <member name="T:System.Diagnostics.CodeAnalysis.UnscopedRefAttribute">
+            <summary>
+            Used to indicate a byref escapes and is not scoped.
+            </summary>
+            <remarks>
+            <para>
+            There are several cases where the C# compiler treats a <see langword="ref"/> as implicitly
+            <see langword="scoped"/> - where the compiler does not allow the <see langword="ref"/> to escape the method.
+            </para>
+            <para>
+            For example:
+            <list type="number">
+                <item><see langword="this"/> for <see langword="struct"/> instance methods.</item>
+                <item><see langword="ref"/> parameters that refer to <see langword="ref"/> <see langword="struct"/> types.</item>
+                <item><see langword="out"/> parameters.</item>
+            </list>
+            </para>
+            <para>
+            This attribute is used in those instances where the <see langword="ref"/> should be allowed to escape.
+            </para>
+            <para>
+            Applying this attribute, in any form, has impact on consumers of the applicable API. It is necessary for
+            API authors to understand the lifetime implications of applying this attribute and how it may impact their users.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:System.Index">
+            <summary>Represent a type can be used to index a collection either from the start or the end.</summary>
+            <remarks>
+            Index is used by the C# compiler to support the new index syntax
+            <code>
+            int[] someArray = new int[5] { 1, 2, 3, 4, 5 } ;
+            int lastElement = someArray[^1]; // lastElement = 5
+            </code>
+            </remarks>
+        </member>
+        <member name="M:System.Index.#ctor(System.Int32,System.Boolean)">
+            <summary>Construct an Index using a value and indicating if the index is from the start or from the end.</summary>
+            <param name="value">The index value. it has to be zero or positive number.</param>
+            <param name="fromEnd">Indicating if the index is from the start or from the end.</param>
+            <remarks>
+            If the Index constructed from the end, index value 1 means pointing at the last element and index value 0 means pointing at beyond last element.
+            </remarks>
+        </member>
+        <member name="P:System.Index.Start">
+            <summary>Create an Index pointing at first element.</summary>
+        </member>
+        <member name="P:System.Index.End">
+            <summary>Create an Index pointing at beyond last element.</summary>
+        </member>
+        <member name="M:System.Index.FromStart(System.Int32)">
+            <summary>Create an Index from the start at the position indicated by the value.</summary>
+            <param name="value">The index value from the start.</param>
+        </member>
+        <member name="M:System.Index.FromEnd(System.Int32)">
+            <summary>Create an Index from the end at the position indicated by the value.</summary>
+            <param name="value">The index value from the end.</param>
+        </member>
+        <member name="P:System.Index.Value">
+            <summary>Returns the index value.</summary>
+        </member>
+        <member name="P:System.Index.IsFromEnd">
+            <summary>Indicates whether the index is from the start or the end.</summary>
+        </member>
+        <member name="M:System.Index.GetOffset(System.Int32)">
+            <summary>Calculate the offset from the start using the giving collection length.</summary>
+            <param name="length">The length of the collection that the Index will be used with. length has to be a positive value</param>
+            <remarks>
+            For performance reason, we don't validate the input length parameter and the returned offset value against negative values.
+            we don't validate either the returned offset is greater than the input length.
+            It is expected Index will be used with collections which always have non negative length/count. If the returned offset is negative and
+            then used to index a collection will get out of range exception which will be same affect as the validation.
+            </remarks>
+        </member>
+        <member name="M:System.Index.Equals(System.Object)">
+            <summary>Indicates whether the current Index object is equal to another object of the same type.</summary>
+            <param name="value">An object to compare with this object</param>
+        </member>
+        <member name="M:System.Index.Equals(System.Index)">
+            <summary>Indicates whether the current Index object is equal to another Index object.</summary>
+            <param name="other">An object to compare with this object</param>
+        </member>
+        <member name="M:System.Index.GetHashCode">
+            <summary>Returns the hash code for this instance.</summary>
+        </member>
+        <member name="M:System.Index.op_Implicit(System.Int32)~System.Index">
+            <summary>Converts integer number to an Index.</summary>
+        </member>
+        <member name="M:System.Index.ToString">
+            <summary>Converts the value of the current Index object to its equivalent string representation.</summary>
+        </member>
+        <member name="T:System.Range">
+            <summary>Represent a range has start and end indexes.</summary>
+            <remarks>
+            Range is used by the C# compiler to support the range syntax.
+            <code>
+            int[] someArray = new int[5] { 1, 2, 3, 4, 5 };
+            int[] subArray1 = someArray[0..2]; // { 1, 2 }
+            int[] subArray2 = someArray[1..^0]; // { 2, 3, 4, 5 }
+            </code>
+            </remarks>
+        </member>
+        <member name="P:System.Range.Start">
+            <summary>Represent the inclusive start index of the Range.</summary>
+        </member>
+        <member name="P:System.Range.End">
+            <summary>Represent the exclusive end index of the Range.</summary>
+        </member>
+        <member name="M:System.Range.#ctor(System.Index,System.Index)">
+            <summary>Construct a Range object using the start and end indexes.</summary>
+            <param name="start">Represent the inclusive start index of the range.</param>
+            <param name="end">Represent the exclusive end index of the range.</param>
+        </member>
+        <member name="M:System.Range.Equals(System.Object)">
+            <summary>Indicates whether the current Range object is equal to another object of the same type.</summary>
+            <param name="value">An object to compare with this object</param>
+        </member>
+        <member name="M:System.Range.Equals(System.Range)">
+            <summary>Indicates whether the current Range object is equal to another Range object.</summary>
+            <param name="other">An object to compare with this object</param>
+        </member>
+        <member name="M:System.Range.GetHashCode">
+            <summary>Returns the hash code for this instance.</summary>
+        </member>
+        <member name="M:System.Range.ToString">
+            <summary>Converts the value of the current Range object to its equivalent string representation.</summary>
+        </member>
+        <member name="M:System.Range.StartAt(System.Index)">
+            <summary>Create a Range object starting from start index to the end of the collection.</summary>
+        </member>
+        <member name="M:System.Range.EndAt(System.Index)">
+            <summary>Create a Range object starting from first element in the collection to the end Index.</summary>
+        </member>
+        <member name="P:System.Range.All">
+            <summary>Create a Range object starting from first element to the end.</summary>
+        </member>
+        <member name="M:System.Range.GetOffsetAndLength(System.Int32)">
+            <summary>Calculate the start offset and length of range object using a collection length.</summary>
+            <param name="length">The length of the collection that the range will be used with. length has to be a positive value.</param>
+            <remarks>
+            For performance reason, we don't validate the input length parameter against negative values.
+            It is expected Range will be used with collections which always have non negative length/count.
+            We validate the range is inside the length scope though.
+            </remarks>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute">
+            <summary>
+            An attribute that allows parameters to receive the expression of other parameters.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute"/> class.
+            </summary>
+            <param name="parameterName">The condition parameter value.</param>
+        </member>
+        <member name="P:System.Runtime.CompilerServices.CallerArgumentExpressionAttribute.ParameterName">
+            <summary>
+            Gets the parameter name the expression is retrieved from.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute">
+            <summary>
+            Indicates that compiler support for a particular feature is required for the location where this attribute is applied.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute"/> type.
+            </summary>
+            <param name="featureName">The name of the feature to indicate.</param>
+        </member>
+        <member name="P:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.FeatureName">
+            <summary>
+            The name of the compiler feature.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.IsOptional">
+            <summary>
+            If true, the compiler can choose to allow access to the location where this attribute is applied if it does not understand <see cref="P:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.FeatureName"/>.
+            </summary>
+        </member>
+        <member name="F:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.RefStructs">
+            <summary>
+            The <see cref="P:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.FeatureName"/> used for the ref structs C# feature.
+            </summary>
+        </member>
+        <member name="F:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.RequiredMembers">
+            <summary>
+            The <see cref="P:System.Runtime.CompilerServices.CompilerFeatureRequiredAttribute.FeatureName"/> used for the required members C# feature.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.InterpolatedStringHandlerArgumentAttribute">
+            <summary>
+            Indicates which arguments to a method involving an interpolated string handler should be passed to that handler.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.InterpolatedStringHandlerArgumentAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Runtime.CompilerServices.InterpolatedStringHandlerArgumentAttribute"/> class.
+            </summary>
+            <param name="argument">The name of the argument that should be passed to the handler.</param>
+            <remarks><see langword="null"/> may be used as the name of the receiver in an instance method.</remarks>
+        </member>
+        <member name="M:System.Runtime.CompilerServices.InterpolatedStringHandlerArgumentAttribute.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Runtime.CompilerServices.InterpolatedStringHandlerArgumentAttribute"/> class.
+            </summary>
+            <param name="arguments">The names of the arguments that should be passed to the handler.</param>
+            <remarks><see langword="null"/> may be used as the name of the receiver in an instance method.</remarks>
+        </member>
+        <member name="P:System.Runtime.CompilerServices.InterpolatedStringHandlerArgumentAttribute.Arguments">
+            <summary>
+            Gets the names of the arguments that should be passed to the handler.
+            </summary>
+            <remarks><see langword="null"/> may be used as the name of the receiver in an instance method.</remarks>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.InterpolatedStringHandlerAttribute">
+            <summary>
+            Indicates the attributed type is to be used as an interpolated string handler.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.IsExternalInit">
+            <summary>
+            Reserved to be used by the compiler for tracking metadata.
+            This class should not be used by developers in source code.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.ModuleInitializerAttribute">
+             <summary>
+             Used to indicate to the compiler that a method should be called
+             in its containing module's initializer.
+             </summary>
+             <remarks>
+             When one or more valid methods
+             with this attribute are found in a compilation, the compiler will
+             emit a module initializer which calls each of the attributed methods.
+            
+             Certain requirements are imposed on any method targeted with this attribute:
+             - The method must be `static`.
+             - The method must be an ordinary member method, as opposed to a property accessor, constructor, local function, etc.
+             - The method must be parameterless.
+             - The method must return `void`.
+             - The method must not be generic or be contained in a generic type.
+             - The method's effective accessibility must be `internal` or `public`.
+            
+             The specification for module initializers in the .NET runtime can be found here:
+             https://github.com/dotnet/runtime/blob/main/docs/design/specs/Ecma-335-Augments.md#module-initializer
+             </remarks>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.RequiredMemberAttribute">
+            <summary>
+            Specifies that a type has required members or that a member is required.
+            </summary>
+        </member>
+        <member name="T:System.Runtime.CompilerServices.SkipLocalsInitAttribute">
+            <summary>
+            Used to indicate to the compiler that the <c>.locals init</c> flag should not be set in method headers.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Versioning.RequiresPreviewFeaturesAttribute.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Runtime.Versioning.RequiresPreviewFeaturesAttribute"/> class.
+            </summary>
+        </member>
+        <member name="M:System.Runtime.Versioning.RequiresPreviewFeaturesAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:System.Runtime.Versioning.RequiresPreviewFeaturesAttribute"/> class with the specified message.
+            </summary>
+            <param name="message">An optional message associated with this attribute instance.</param>
+        </member>
+        <member name="P:System.Runtime.Versioning.RequiresPreviewFeaturesAttribute.Message">
+            <summary>
+            Returns the optional message associated with this attribute instance.
+            </summary>
+        </member>
+        <member name="P:System.Runtime.Versioning.RequiresPreviewFeaturesAttribute.Url">
+            <summary>
+            Returns the optional URL associated with this attribute instance.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1248 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utility.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:Utility.WebApi.Data.ApiResult">
+            <summary>
+            Api消息
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.Data.ApiResult.#ctor">
+            <summary>
+            Api消息泛型容器
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.Data.ApiResult.Code">
+            <summary>
+            代码
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.Data.ApiResult.Message">
+            <summary>
+            返回消息
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.Data.ApiResult.Success">
+            <summary>
+            是否成功
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.Data.ApiResult`1">
+            <summary>
+            Api消息泛型容器
+            </summary>
+            <typeparam name="T">泛型消息</typeparam>
+        </member>
+        <member name="M:Utility.WebApi.Data.ApiResult`1.#ctor">
+            <summary>
+            Api消息泛型容器
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.Data.ApiResult`1.Data">
+            <summary>
+            数据 
+            <para> 类型：<typeparamref name="T"/>   </para>   
+            </summary>    
+            <typeparam name="T">description</typeparam>
+        </member>
+        <member name="T:Utility.WebApi.CookieFrequency">
+            <summary>
+            Cookie验证频率
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.CookieFrequency.Never">
+            <summary>
+            从不验证
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.CookieFrequency.One">
+            <summary>
+            一次
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.CookieFrequency.Every">
+            <summary>
+            每次
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.CookieAttribute">
+            <summary>
+            Cookie验证特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.CookieAttribute.#ctor">
+            <summary>
+            Cookie验证特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.CookieAttribute.#ctor(Utility.WebApi.CookieFrequency)">
+            <summary>
+            Cookie验证特性
+            </summary>
+            <param name="cookieFrequency">Cookie验证频率</param>
+        </member>
+        <member name="F:Utility.WebApi.CookieAttribute._isEnabled">
+            <summary>
+            是否验证Cookie
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.CookieAttribute.IsEnabled">
+            <summary>
+            是否验证Cookie
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.CookieAttribute._methodType">
+            <summary>
+            方法类型
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.CookieAttribute.MethodType">
+            <summary>
+            方法类型
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.CookieAttribute._frequency">
+            <summary>
+            Cookie验证频率
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.CookieAttribute.Frequency">
+            <summary>
+            Cookie验证频率
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.EncodingAttribute">
+            <summary>
+            编码特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.EncodingAttribute.#ctor(Utility.WebApi.Encode)">
+            <summary>
+            编码特性
+            </summary>
+            <param name="encode">编码类型</param>
+        </member>
+        <member name="F:Utility.WebApi.EncodingAttribute._encoding">
+            <summary>
+            编码类型
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.EncodingAttribute.Encoding">
+            <summary>
+            编码类型
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.Encode">
+            <summary>
+            编码类型
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.IFormData">
+            <summary>
+            表单数据约束接口
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.IFormData.Key">
+            <summary>
+            表单键，request["key"]
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.IFormData.Value">
+            <summary>
+            表单值,上传文件时忽略，request["key"].value
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.IFormData.IsFile">
+            <summary>
+            是否是文件
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.IFormData.FileName">
+            <summary>
+            上传的文件名
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.IFormData.FileContent">
+            <summary>
+            上传的文件内容
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.IFormData.FilePath">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.HttpFormAttribute">
+            <summary>
+            表单数据特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpFormAttribute.#ctor">
+            <summary>
+            表单数据特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpFormAttribute.#ctor(System.Boolean)">
+            <summary>
+            表单数据特性
+            </summary>
+            <param name="isFormData">是否是表单数据</param>
+        </member>
+        <member name="M:Utility.WebApi.HttpFormAttribute.#ctor(System.Boolean,System.String)">
+            <summary>
+            表单数据特性
+            </summary>
+            <param name="isFormData">是否是表单数据</param>
+            <param name="contentType">请求内容类型</param>
+        </member>
+        <member name="M:Utility.WebApi.HttpFormAttribute.#ctor(System.String)">
+            <summary>
+            表单数据特性
+            </summary>
+            <param name="contentType">请求内容类型</param>
+        </member>
+        <member name="F:Utility.WebApi.HttpFormAttribute._isFormData">
+            <summary>
+            是否是表单数据
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpFormAttribute.IsFormData">
+            <summary>
+            是否是表单数据
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.HttpFormAttribute._contentType">
+            <summary>
+            请求内容类型
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpFormAttribute.ContentType">
+            <summary>
+            请求内容类型
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.FromUriAttribute">
+            <summary>
+            一个特性，该特性指定操作参数来自传入 System.Net.Http.HttpRequestMessage 的 URI
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.FromUriAttribute.#ctor">
+            <summary>
+            一个特性，该特性指定操作参数来自传入 System.Net.Http.HttpRequestMessage 的 URI
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.FromUriAttribute.#ctor(System.String)">
+            <summary>
+             一个特性，该特性指定操作参数来自传入 System.Net.Http.HttpRequestMessage 的 URI
+            </summary>
+            <param name="insideChar">内嵌字符</param>
+        </member>
+        <member name="F:Utility.WebApi.FromUriAttribute._insideChar">
+            <summary>
+            内嵌字符
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.FromUriAttribute.InsideChar">
+            <summary>
+            内嵌字符
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.HttpAttribute">
+            <summary>
+            Http路由特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpAttribute.#ctor">
+            <summary>
+            Http路由特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpAttribute.#ctor(System.String)">
+            <summary>
+            Http路由特性
+            </summary>
+            <param name="url">路由地址</param>
+        </member>
+        <member name="F:Utility.WebApi.HttpAttribute._routoUrl">
+            <summary>
+            路由地址
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpAttribute.RoutoUrl">
+            <summary>
+            路由地址
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.HttpAttribute._apiUrl">
+            <summary>
+            接口原始路由地址(不含服务地址)
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpAttribute.ApiUrl">
+            <summary>
+            接口原始路由地址(不含服务地址)
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.HttpConfigration">
+            <summary>
+            Http配置
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpConfigration.Url">
+            <summary>
+            动态路由地址
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpConfigration.ContentType">
+            <summary>
+            内容类型
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpConfigration.Cookie">
+            <summary>
+            Cookie字符串
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpConfigration.CookieCollections">
+            <summary>
+            Cookie列表
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpConfigration.IsVerifyCookie">
+            <summary>
+            是否验证Cookie
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.HttpConfigration._dicApiUrl">
+            <summary>
+            Api的路由地址容器字典
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpConfigration.DicApiUrl">
+            <summary>
+            Api的路由地址容器字典
+            外部暂时没有用到的需求
+            暂时不对外开放 姜彦202208181642
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpConfigration.Initialize(System.String)">
+            <summary>
+            初始化JSON配置文件
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:Utility.WebApi.HttpConfigration.GetApiUrl(System.Type)">
+            <summary>
+            获取Api路由地址
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Utility.WebApi.ApiService.ServiceName">
+            <summary>
+            服务名称
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.ApiService.Url">
+            <summary>
+            服务地址
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.ApiService.Apis">
+            <summary>
+            服务Api列表
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.ApiServiceRoot.ApiServices">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.HttpDeleteAttribute">
+            <summary>
+            HttpDelete路由特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpDeleteAttribute.#ctor(System.String)">
+            <summary>
+            HttpDelete路由特性
+            </summary>
+            <param name="url">路由地址</param>
+        </member>
+        <member name="T:Utility.WebApi.HttpGetAttribute">
+            <summary>
+            HttpGet路由特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpGetAttribute.#ctor(System.String)">
+            <summary>
+            HttpGet路由特性
+            </summary>
+            <param name="url">路由地址</param>
+        </member>
+        <member name="T:Utility.WebApi.HttpPostAttribute">
+            <summary>
+            HttpPost路由特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpPostAttribute.#ctor(System.String)">
+            <summary>
+            HttpPost路由特性
+            </summary>
+            <param name="url">路由地址</param>
+        </member>
+        <member name="T:Utility.WebApi.HttpPutAttribute">
+            <summary>
+            HttpPut路由特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpPutAttribute.#ctor(System.String)">
+            <summary>
+            HttpPut路由特性
+            </summary>
+            <param name="url">路由地址</param>
+        </member>
+        <member name="T:Utility.WebApi.HttpTask">
+            <summary>
+            Http
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpTask.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpTask.#ctor(System.Object)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.HttpTaskManager">
+            <summary>
+            Http任务管理器
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.HttpTaskManager._currentCookieValue">
+            <summary>
+            当前Cookie值
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpTaskManager.CurrentCookieValue">
+            <summary>
+            当前Cookie值
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResult``1(System.String,System.Type)">
+            <summary>
+            获取Task结果
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodName">当前方法名称</param>
+            <param name="classType">当前方法所在的类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResultAsync``1(System.String,System.Type)">
+            <summary>
+            获取Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodName">当前方法名称</param>
+            <param name="classType">当前方法所在的类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.LogPrint(System.Type,System.String,System.String,System.String,System.String)">
+            <summary>
+            日记打印
+            </summary>
+            <param name="interfaceType">接口类型</param>
+            <param name="methodName">方法名</param>
+            <param name="url">路由地址</param>
+            <param name="paramInput">入参</param>
+            <param name="paramOutput">出参</param>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResult``1(System.String,System.Type,System.String)">
+            <summary>
+            获取Task结果
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodName">当前方法名称</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="jsonData">Json数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResultAsync``1(System.String,System.Type,System.String)">
+            <summary>
+            获取Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodName">当前方法名称</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="jsonData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResult``1(System.Reflection.MethodBase,System.Type)">
+            <summary>
+            获取Task结果
+            <para>同步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodBase">当前方法反射基</param>
+            <param name="classType">当前方法所在的类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResultAsync``1(System.Reflection.MethodBase,System.Type)">
+            <summary>
+            获取Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodBase">当前方法反射基</param>
+            <param name="classType">当前方法所在的类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResultAsync``1(System.Reflection.MethodBase,System.Type,System.Boolean,System.Object[])">
+            <summary>
+            获取Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodBase">当前方法反射基</param>
+            <param name="classType">当前方法所在的类</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResultAsync``1(System.Reflection.MethodBase,System.Type,System.String)">
+            <summary>
+            获取Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodBase">当前方法反射基</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="jsonData">Json数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResult``1(System.Reflection.MethodBase,System.Type,System.String)">
+            <summary>
+            获取Task结果
+            <para>同步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodBase">当前方法反射基</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="jsonData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResultAsync``1(System.Reflection.MethodBase,System.Type,System.Object)">
+            <summary>
+            获取Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodBase">当前方法反射基</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="dataObject">数据对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResultAsyncOrg``1(System.Reflection.MethodBase,System.Type,System.Object[])">
+            <summary>
+            获取Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodBase">当前方法反射基</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="objects">多参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResultAsync``1(System.Reflection.MethodBase,System.Type,System.Object[])">
+            <summary>
+            获取Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodBase">当前方法反射基</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="objects">多参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpTaskManager.GetTaskResult``1(System.Reflection.MethodBase,System.Type,System.Object)">
+            <summary>
+            获取Task结果
+            <para>同步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodBase">当前方法反射基</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="dataObject">数据对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:Utility.WebApi.HttpWebHelper">
+            <summary>
+            HttpWeb帮助类
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpWebHelper.IsVerifyCookie">
+            <summary>
+            是否验证Cookie
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpWebHelper.CurrentCookieValue">
+            <summary>
+            当前Cookie值
+            </summary>
+        </member>
+        <member name="P:Utility.WebApi.HttpWebHelper.SetCookieValue">
+            <summary>
+            预设Cookie值
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.HttpWebHelper._cookie">
+            <summary>
+            Cookie字符串
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.HttpWebHelper._cookieCollections">
+            <summary>
+            Cookie列表
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.HttpWebHelper._isVerifyCookie">
+            <summary>
+            是否验证Cookie
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.HttpWebHelper._isHasVerifyCookie">
+            <summary>
+            是否已经验证Cookie
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.HttpWebHelper._currentCookieValue">
+            <summary>
+            当前Cookie值
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.HttpWebHelper._setCookieValue">
+            <summary>
+            预设Cookie值
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Utility.WebApi.HttpWebHelper.GetHtml(System.String,System.Net.CookieContainer,System.String,System.String)" -->
+        <member name="M:Utility.WebApi.HttpWebHelper.GetHtml(System.String,System.Text.Encoding)">
+            <summary>
+            获取HTML
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.GetHtmlPost(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            Post方式获取HTML(支持验证Cookie)
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.GetHtmlDelete(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            Delete方式获取HTML(支持验证Cookie)
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.GetHtmlPut(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            Put方式获取HTML(支持验证Cookie)
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.PostHtml(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            提交HTML
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.GetHtml(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            获取HTML
+            </summary>
+            <param name="ip"></param>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.Get(System.String,System.Text.Encoding)">
+            <summary>
+            获取
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.HttpPost(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            提交
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.HttpPostCookieOne(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            提交 + Cookie仅仅验证一次
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.HttpPostCookieEvery(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            提交 + Cookie每次都验证 并重新刷新整个生命周期内的Cookie值
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.HttpPostPhoto(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            提交图片
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.PostFormData(System.String,System.Collections.Generic.List{Utility.WebApi.IFormData},System.String,System.Net.CookieContainer,System.String,System.Text.Encoding,System.Int32)">
+            <summary>
+            使用Post方法获取字符串结果
+            </summary>
+            <param name="url"></param>
+            <param name="formItems">Post表单内容</param>
+            <param name="cookieContainer"></param>
+            <param name="timeOut">默认20秒</param>
+            <param name="encoding">响应内容的编码类型（默认utf-8）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.Post(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            提交
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.GetToken(System.String)">
+            <summary>
+            接口请求
+            </summary>
+            <param name="url">请求地址</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.Put(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            更新
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.Delete0(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            删除-Cookie已经传入，但是返回结果提示Session不对，检查Heard 里面的Cookie不见了
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.CommonHttpRequest(System.String,System.String,System.String)">
+            <summary>
+            通用Http请求
+            </summary>
+            <param name="url">请求地址</param>
+            <param name="type">请求类型</param>
+            <param name="data">字符串数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.HttpRequest(System.String,System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            通用请求方法
+            </summary>
+            <param name="url"></param>
+            <param name="datas"></param>
+            <param name="method">POST GET PUT DELETE</param>
+            <param name="contentType">"POST application/x-www-form-urlencoded; charset=UTF-8"</param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            处理 未能为 SSL/TLS 安全通道建立信任关系 姜彦 202207011600
+            </summary>
+            <param name="sender"></param>
+            <param name="certificate"></param>
+            <param name="chain"></param>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.HttpWebHelper.HttpRequest0(System.String,System.String,System.String,System.String,System.Text.Encoding)">
+            <summary>
+            通用请求方法
+            </summary>
+            <param name="url"></param>
+            <param name="datas"></param>
+            <param name="method">POST GET PUT DELETE</param>
+            <param name="contentType">"POST application/x-www-form-urlencoded; charset=UTF-8"</param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Utility.WebApi.IHttpApi">
+            <summary>
+            Http接口
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.InterfaceContainer">
+            <summary>
+            接口容器
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.InterfaceContainer._dicInstance">
+            <summary>
+            注入的实例容器字典
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.InterfaceContainer.Build(System.String)">
+            <summary>
+            注入接口并产生动态实例装填进容器中
+            </summary>
+            <param name="interfaceServicedllAssemblyName">接口服务dll程序集名称</param>
+        </member>
+        <member name="M:Utility.WebApi.InterfaceContainer.Register``1">
+            <summary>
+            注册接口
+            </summary>
+            <typeparam name="T">接口</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.InterfaceContainer.Register(System.Type)">
+            <summary>
+            注册接口
+            </summary>
+            <param name="interfaceType">接口类型</param>
+        </member>
+        <member name="M:Utility.WebApi.InterfaceContainer.Build">
+            <summary>
+            4个参数 成功版本 姜彦 202207201621
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.InterfaceContainer.Build0">
+            <summary>
+            成功的 姜彦 202207191711
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Utility.WebApi.ContainerManager">
+            <summary>
+            容器管理器
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.ContainerManager.GetReturnType(System.String,System.Type)">
+            <summary>
+            获取方法的返回类型Type
+            </summary>
+            <param name="methodName0"></param>
+            <param name="classType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerManager.LogPrint(System.Type,System.String,System.String,System.String,System.String)">
+            <summary>
+            日记打印
+            </summary>
+            <param name="interfaceType">接口类型</param>
+            <param name="methodName">方法名</param>
+            <param name="url">路由地址</param>
+            <param name="paramInput">入参</param>
+            <param name="paramOutput">出参</param>
+        </member>
+        <member name="M:Utility.WebApi.ContainerManager.TaskResultAsyncWebApi``1(System.String,System.Type,System.Object[])">
+            <summary>
+            获取Task结果
+            <para>同步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodName0">当前方法</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="objects">多参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerManager.WebApiGetTaskResultAsync``1(System.String,System.Type,System.Object[])">
+            <summary>
+            获取Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodName0">当前方法</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="objects">多参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerManager.TaskResultAsyncWebApi0``1(System.String,System.Type,System.Object[])">
+            <summary>
+            获取Task结果 原来的 泛型T没有起作用，因为没有传入T的类型 姜彦202207202226      
+            </summary>        
+        </member>
+        <member name="P:Utility.WebApi.ContainerDockerHttper.IsVerifyCookie">
+            <summary>
+            是否验证Cookie
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.ContainerDockerHttper._isVerifyCookie">
+            <summary>
+            是否验证Cookie
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.ContainerDockerHttper._cookieCollections">
+            <summary>
+            Cookie列表
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.ContainerDockerHttper._isHasVerifyCookie">
+            <summary>
+            是否已经验证Cookie
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.ContainerDockerHttper._cookie">
+            <summary>
+            Cookie字符串
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.ContainerDockerHttper._currentCookieValue">
+            <summary>
+            当前Cookie值
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerHttper.GetHtml(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            获取HTML
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerHttper.HttpPost(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            提交
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerHttper.GetHtmlPost(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            Post方式获取HTML(支持验证Cookie)
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerHttper.PostFormData(System.String,System.Collections.Generic.List{Utility.WebApi.IFormData},System.String,System.Net.CookieContainer,System.String,System.Text.Encoding,System.Int32)">
+            <summary>
+            使用Post方法获取字符串结果
+            </summary>
+            <param name="url"></param>
+            <param name="formItems">Post表单内容</param>
+            <param name="cookieContainer"></param>
+            <param name="timeOut">默认20秒</param>
+            <param name="encoding">响应内容的编码类型（默认utf-8）</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerHttper.HttpPostCookieEvery(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            提交 + Cookie每次都验证 并重新刷新整个生命周期内的Cookie值
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerHttper.HttpPostCookieOne(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            提交 + Cookie仅仅验证一次
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <param name="postData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerHttper.GetHtmlPut(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            Put方式获取HTML(支持验证Cookie)
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerHttper.GetHtmlDelete(System.String,System.Text.Encoding,System.String)">
+            <summary>
+            Delete方式获取HTML(支持验证Cookie)
+            </summary>
+            <param name="url"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerHttper.CheckValidationResult(System.Object,System.Security.Cryptography.X509Certificates.X509Certificate,System.Security.Cryptography.X509Certificates.X509Chain,System.Net.Security.SslPolicyErrors)">
+            <summary>
+            处理 未能为 SSL/TLS 安全通道建立信任关系 姜彦 202207011600
+            415
+            </summary>
+            <param name="sender"></param>
+            <param name="certificate"></param>
+            <param name="chain"></param>
+            <param name="errors"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Utility.WebApi.ContainerDocker">
+            <summary>
+            容器
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.ContainerDocker._dicInstance">
+            <summary>
+            注入的实例容器字典
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDocker.Build(System.String)">
+            <summary>
+            注入接口并产生动态实例装填进容器中
+            </summary>
+            <param name="interfaceServicedllAssemblyName">接口服务dll程序集名称</param>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDocker.Register``1">
+            <summary>
+            注册接口
+            </summary>
+            <typeparam name="T">接口</typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDocker.Register(System.Type)">
+            <summary>
+            注册接口
+            </summary>
+            <param name="interfaceType">接口类型</param>
+        </member>
+        <member name="T:Utility.WebApi.ContainerDockerManager">
+            <summary>
+            容器管理器
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerManager.GetReturnType(System.String,System.Type,System.Boolean@)">
+            <summary>
+            获取方法的返回类型Type
+            </summary>
+            <param name="methodName0"></param>
+            <param name="classType"></param>
+            <param name="isApiResultType">是否是ApiResult类型数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerManager.GetReturnType(System.String,System.Type)">
+            <summary>
+            获取方法的返回类型Type
+            </summary>
+            <param name="methodName0"></param>
+            <param name="classType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerManager.GetReturnType0(System.String,System.Type)">
+            <summary>
+            获取方法的返回类型Type
+            </summary>
+            <param name="methodName0"></param>
+            <param name="classType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerManager.LogPrint(System.Type,System.String,System.String,System.String,System.String)">
+            <summary>
+            日记打印
+            </summary>
+            <param name="interfaceType">接口类型</param>
+            <param name="methodName">方法名</param>
+            <param name="url">路由地址</param>
+            <param name="paramInput">入参</param>
+            <param name="paramOutput">出参</param>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerManager.GetApiResultTaskAsync``1(System.String,System.Type,System.Object[])">
+            <summary>
+            获取ApiResult的Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodName0">当前方法</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="objects">多参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerManager.GetTaskAsync``1(System.String,System.Type,System.Object[])">
+            <summary>
+            获取ApiResult的Task结果
+            <para>异步</para>
+            </summary>
+            <typeparam name="T">结果类型</typeparam>
+            <param name="methodName0">当前方法</param>
+            <param name="classType">当前方法所在的类</param>
+            <param name="objects">多参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerManager.GetNewJsonString(System.String)">
+            <summary>
+            判断Json字符串是否被多次转义
+            </summary>
+            <param name="jsonString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerManager.GetResultSuccess``1(System.String)">
+            <summary>
+            获取ApiResult的结果
+            处理T为string类型时的JsonConvert.DeserializeObject(jsonString);转换异常错误；
+            姜彦 202209151722
+            </summary>
+            <typeparam name="T">对象类型</typeparam>
+            <param name="jsonData">返回的字符串，可以是Json可以不是Json格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:Utility.WebApi.ContainerDockerManager.GetApiResult``1(Utility.WebApi.Data.ApiResult{System.String},System.String@)">
+            <summary>
+            获取ApiResult泛型结果
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="stringApiResult">HttpResponse返回的ApiResult数据类型</param>
+            <param name="jsonString"></param>
+            <returns>ApiResult泛型结果</returns>
+        </member>
+        <member name="T:Utility.WebApi.LogLevel">
+            <summary>
+            日记级别
+            </summary>
+        </member>
+        <member name="F:Utility.WebApi.LogLevel.Debug">
+            <summary> 调试 </summary>
+        </member>
+        <member name="F:Utility.WebApi.LogLevel.Info">
+            <summary> 提示 </summary>
+        </member>
+        <member name="F:Utility.WebApi.LogLevel.Warn">
+            <summary> 警告 </summary>
+        </member>
+        <member name="F:Utility.WebApi.LogLevel.Error">
+            <summary> 错误 </summary>
+        </member>
+        <member name="F:Utility.WebApi.LogLevel.Fatal">
+            <summary> 致命 </summary>
+        </member>
+        <member name="F:Utility.WebApi.LogLevel.Trace">
+            <summary> 跟踪 </summary>
+        </member>
+        <member name="F:Utility.WebApi.LogLevel.All">
+            <summary> 全部 </summary>
+        </member>
+        <member name="T:Utility.WebApi.LogAttribute">
+            <summary>
+            日记特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.LogAttribute.#ctor">
+            <summary>
+            日记特性
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.LogAttribute.#ctor(Utility.WebApi.LogLevel)">
+            <summary>
+            日记特性
+            </summary>
+            <param name="logLevel">日记级别</param>
+        </member>
+        <member name="P:Utility.WebApi.LogAttribute.Level">
+            <summary>
+            日记级别
+            </summary>
+        </member>
+        <member name="T:Utility.WebApi.WebApiLog">
+            <summary>
+            日记
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.WebApiLog.SetPath(System.String)">
+            <summary>
+            设置日记路径
+            </summary>
+            <param name="path">日记路径</param>
+        </member>
+        <member name="M:Utility.WebApi.WebApiLog.SetPath(System.String,System.String)">
+            <summary>
+            设置日记路径+日记名称
+            </summary>
+            <param name="path">日记路径</param>
+            <param name="fileName">日记名称</param>
+        </member>
+        <member name="M:Utility.WebApi.WebApiLog.Enable">
+            <summary>
+            启用日记打印并输出
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.WebApiLog.Disable">
+            <summary>
+            关闭日记打印不输出
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.WebApiLog.Print(System.String,Utility.WebApi.LogLevel)">
+            <summary>
+            打印日记
+            </summary>
+            <param name="message">日记消息</param>
+            <param name="logLevel">日记等级</param>
+        </member>
+        <member name="T:Utility.WebApi.Mapper.Mapper">
+            <summary>
+            Mapper
+            </summary>
+        </member>
+        <member name="M:Utility.WebApi.Mapper.Mapper.MapToDebug``1(System.Object)">
+            <summary>
+            将一个对象转换为指定类型
+            </summary>
+            <param name="obj">待转换的对象</param>
+            <returns>转换后的对象</returns>
+        </member>
+        <member name="M:Utility.WebApi.Mapper.Mapper.MapTo``1(System.Object)">
+            <summary>
+            将一个对象转换为指定类型
+            </summary>
+            <typeparam name="T">待转换的对象</typeparam>
+            <param name="obj">目标类型</param>
+            <returns>转换后的对象</returns>
+        </member>
+        <member name="M:Utility.WebApi.Mapper.Mapper.MapToList``1(System.Collections.Generic.IEnumerable{System.Object})">
+            <summary>
+            将一个对象列表转换为指定类型的对象列表
+            </summary>
+            <param name="obj">待转换的对象列表</param>
+            <returns>转换后的对象列表</returns>
+        </member>
+    </members>
+</doc>
